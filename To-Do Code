@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Super Pro To-Do</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-bg: linear-gradient(135deg, #6a11cb, #2575fc);
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --button-bg: #2575fc;
+      --button-hover: #1a5cd8;
+      --completed-bg: #a8d5a8;
+      --failed-bg: #e0a8a8;
+      --task-bg: #f5f5f5;
+      --priority-high: #ff4d4d;
+      --priority-medium: #ffa500;
+      --priority-low: #00b09b;
+    }
+
+    body.dark-mode {
+      --primary-bg: linear-gradient(135deg, #000428, #004e92);
+      --card-bg: #1e1e2f;
+      --text-color: #eeeeee;
+      --button-bg: #0f9b0f;
+      --button-hover: #0b7d0b;
+      --completed-bg: #446644;
+      --failed-bg: #663333;
+      --task-bg: #333344;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; transition: all 0.5s ease; }
+    body { font-family: 'Poppins', sans-serif; background: var(--primary-bg); color: var(--text-color); }
+
+    .navbar {
+      background: var(--card-bg); padding: 15px 30px;
+      display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .logo img { height: 40px; }
+    .logo span { font-size: 24px; font-weight: 600; color: var(--button-bg); }
+
+    .user-container { display: flex; align-items: center; gap: 10px; }
+
+    .user-switch {
+      position: relative; cursor: pointer; background: white; color: black;
+      border-radius: 20px; padding: 5px 10px; display: flex;
+      align-items: center; gap: 8px; font-weight: 600;
+    }
+
+    .user-list {
+      position: absolute; top: 50px; right: 0; background: white; color: black;
+      border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      display: flex; flex-direction: column; width: 120px;
+      overflow: hidden; max-height: 0; transition: max-height 0.4s ease;
+    }
+
+    .user-list.open { max-height: 500px; }
+
+    .user-list div {
+      padding: 10px; cursor: pointer; display: flex;
+      align-items: center; gap: 8px;
+    }
+
+    .user-list div:hover { background: #eee; }
+
+    .toggle-container button {
+      background: none; border: none; font-size: 24px;
+      cursor: pointer; margin-right: 20px;
+    }
+
+    .container {
+      background: var(--card-bg); padding: 40px; border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      max-width: 900px; margin: 40px auto;
+    }
+
+    h2 { text-align: center; margin-bottom: 30px; color: var(--button-bg); }
+
+    input[type="text"], input[type="date"], input[type="time"], select {
+      width: 100%; padding: 15px 10px; margin-bottom: 20px;
+      border: 2px solid #ddd; border-radius: 10px; font-size: 16px;
+    }
+
+    button {
+      width: 100%; padding: 15px; background: var(--button-bg);
+      color: #fff; font-size: 16px; border: none; border-radius: 10px;
+      cursor: pointer; margin-bottom: 30px;
+    }
+    button:hover { background: var(--button-hover); }
+
+    ul { list-style: none; padding: 0; margin-top: 20px; }
+    li {
+      background: var(--task-bg); color: var(--text-color);
+      padding: 20px; border-radius: 10px; margin-bottom: 15px;
+      display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-left: 15px solid #999;
+    }
+
+    li.completed { background: var(--completed-bg); border-left-color: var(--completed-bg); text-decoration: line-through; }
+    li.failed { background: var(--failed-bg); border-left-color: var(--failed-bg); }
+    
+    .priority-high:not(.completed):not(.failed) { border-left-color: var(--priority-high); }
+    .priority-medium:not(.completed):not(.failed) { border-left-color: var(--priority-medium); }
+    .priority-low:not(.completed):not(.failed) { border-left-color: var(--priority-low); }
+
+    .btn-complete, .btn-delete, .btn-fail {
+      background: none; border: none; color: inherit;
+      font-size: 20px; cursor: pointer; margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png">
+      <span>Super Pro To-ADo</span>
+    </div>
+    <div class="user-container">
+      <button id="darkModeToggle" onclick="toggleDarkMode()">🌙</button>
+      <div class="user-switch" onclick="toggleUserList()">
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" width="24"> 
+        <span id="currentUserText">User 1</span>
+        <div class="user-list" id="userList">
+          <div onclick="switchUser('user1')"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" width="20"> User 1</div>
+          <div onclick="switchUser('user2')"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" width="20"> User 2</div>
+          <div onclick="switchUser('user3')"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" width="20"> User 3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>My Tasks</h2>
+    <input type="text" id="taskInput" placeholder="Task Description...">
+    <select id="category">
+      <option value="Work">💻 Work</option>
+      <option value="Personal">🏠 Personal</option>
+      <option value="Shopping">🛒 Shopping</option>
+      <option value="Fitness">💪 Fitness</option>
+    </select>
+    <select id="priority">
+      <option value="low">Low Priority</option>
+      <option value="medium">Medium Priority</option>
+      <option value="high">High Priority</option>
+    </select>
+    <input type="text" id="responsibility" placeholder="Assigned To (optional)">
+    <input type="date" id="dueDate">
+    <input type="time" id="dueTime">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+  </div>
+
+<script>
+  let profiles = JSON.parse(localStorage.getItem("profiles")) || { user1: [], user2: [], user3: [] };
+  let currentUser = "user1";
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    document.getElementById("darkModeToggle").textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  }
+
+  function toggleUserList() {
+    const list = document.getElementById("userList");
+    if (list.classList.contains("open")) {
+      list.classList.remove("open");
+      list.style.maxHeight = "0px";
+    } else {
+      list.classList.add("open");
+      list.style.maxHeight = list.scrollHeight + "px";
+    }
+  }
+
+  function switchUser(user) {
+    currentUser = user;
+    document.getElementById("currentUserText").textContent = "User " + user.slice(-1);
+    loadTasks();
+    const list = document.getElementById("userList");
+    list.classList.remove("open");
+    list.style.maxHeight = "0px";
+  }
+
+  function addTask() {
+    const taskInput = document.getElementById("taskInput").value.trim();
+    if (!taskInput) return;
+    const task = {
+      taskInput,
+      category: document.getElementById("category").value,
+      priority: document.getElementById("priority").value,
+      responsibility: document.getElementById("responsibility").value,
+      dueDate: document.getElementById("dueDate").value,
+      dueTime: document.getElementById("dueTime").value,
+      completed: false, failed: false
+    };
+    profiles[currentUser].push(task);
+    saveTasks();
+    createTask(task);
+    clearForm();
+  }
+
+  function createTask(task) {
+    const li = document.createElement("li");
+    li.classList.add(`priority-${task.priority}`);
+    if(task.completed) li.classList.add("completed");
+    if(task.failed) li.classList.add("failed");
+
+    li.innerHTML = `<div><strong>${task.taskInput}</strong> (${task.category})<br>
+      ${task.responsibility ? `👤 ${task.responsibility}<br>` : ''}📅 ${task.dueDate} ${task.dueTime}</div>
+      <span>
+        <button class="btn-complete" onclick="toggleComplete(this)">✔️</button>
+        <button class="btn-fail" onclick="toggleFail(this)">❌</button>
+        <button class="btn-delete" onclick="deleteTask(this)">🗑️</button>
+      </span>`;
+    document.getElementById("taskList").appendChild(li);
+  }
+
+  function toggleComplete(btn) {
+    const li = btn.closest("li");
+    li.classList.toggle("completed");
+    const taskText = li.querySelector("strong").innerText;
+    profiles[currentUser].forEach(t => { if(t.taskInput === taskText) t.completed = !t.completed; });
+    saveTasks();
+  }
+
+  function toggleFail(btn) {
+    const li = btn.closest("li");
+    li.classList.toggle("failed");
+    const taskText = li.querySelector("strong").innerText;
+    profiles[currentUser].forEach(t => { if(t.taskInput === taskText) t.failed = !t.failed; });
+    saveTasks();
+  }
+
+  function deleteTask(btn) {
+    const li = btn.closest("li");
+    const taskText = li.querySelector("strong").innerText;
+    profiles[currentUser] = profiles[currentUser].filter(t => t.taskInput !== taskText);
+    li.remove();
+    saveTasks();
+  }
+
+  function clearForm() {
+    document.getElementById("taskInput").value = "";
+    document.getElementById("responsibility").value = "";
+    document.getElementById("dueDate").value = "";
+    document.getElementById("dueTime").value = "";
+  }
+
+  function saveTasks() {
+    localStorage.setItem("profiles", JSON.stringify(profiles));
+  }
+
+  function loadTasks() {
+    document.getElementById("taskList").innerHTML = "";
+    profiles[currentUser].forEach(task => createTask(task));
+  }
+
+  loadTasks();
+</script>
+
+</body>
+</html>
