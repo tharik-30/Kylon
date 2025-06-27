@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kylone Anti-Virus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+  <h2 class="logo">KYLONE</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="𝘛𝘺𝘱𝘦 𝘵𝘰 𝘚𝘦𝘢𝘳𝘤𝘩">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div> 
+        <div class="content">
+            <h1>Anti-Virus &<br><span>Real-Time Scanner</span></h1>
+            <p class="par">Protect your digital world with our trusted and reliable antivirus software, 
+                providing <br> expert defense against malware, viruses, cyber threats, and online vulnerabilities, 
+                ensuring <br> a safer and more secure online experience for individuals and businesses alike.</p>
+                <button class="cn"><a href="#">Download</a></button>
+                <div class="form">
+                    <h2>Login Here</h2>
+                    <input type="email" name="email" placeholder="Enter Email Here">
+                    <input type="password" name="" placeholder="Enter Password Here">
+                    <button class="btnn"><a href="#">Login</a></button>
+                    <p class="link">Don't have an account<br>
+                    <a href="#">Sign up </a> here</a></p>
+                    <p class="liw">Log in with</p>
+
+                    <div class="icons">
+                        <a href="https://www.facebook.com"target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://www.instagram.com"target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="https://x.com"target="_blank"><ion-icon name="logo-Twitter"></ion-icon></a>
+                        <a href="https://www.google.co.in"target="_blank"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="https://www.skype.com/en"target="_blank"><ion-icon name="logo-skype"></ion-icon></a>
+                    </div>
+                </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <hr>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <style>
+    body {
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to right, rgb(195, 55, 100), rgb(29, 38, 113));
+  color: white;
+  font-family: Arial, sans-serif;
+}
+</style>
+        <div style="max-width: 1000px; margin: 40px auto; padding: 0 20px; display: flex; align-items: center; gap: 40px;">
+  <div style="flex: 0 0 60%;">
+<style> 
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+</style>
+    <h1 style="color:rgb(255, 145, 0, 0.993);">About us:</h1>
+    <style>       
+p {
+  text-indent: 50px;
+}
+    </style>
+    <p style="font-size: 24px; line-height: 1.5;">
+      𝙺𝚢𝚕𝚘𝚗𝚎 𝙰𝚗𝚝𝚒𝚟𝚒𝚛𝚞𝚜 𝚒𝚜 𝚊 𝚕𝚒𝚐𝚑𝚝𝚠𝚎𝚒𝚐𝚑𝚝, 𝚙𝚘𝚠𝚎𝚛𝚏𝚞𝚕 𝚜𝚎𝚌𝚞𝚛𝚒𝚝𝚢 𝚜𝚘𝚕𝚞𝚝𝚒𝚘𝚗
+𝚍𝚎𝚜𝚒𝚐𝚗𝚎𝚍 𝚝𝚘 𝚙𝚛𝚘𝚝𝚎𝚌𝚝 𝚢𝚘𝚞𝚛 𝚍𝚎𝚟𝚒𝚌𝚎𝚜 𝚏𝚛𝚘𝚖 𝚟𝚒𝚛𝚞𝚜𝚎𝚜, 𝚖𝚊𝚕𝚠𝚊𝚛𝚎, 𝚊𝚗𝚍 𝚘𝚗𝚕𝚒𝚗𝚎 𝚝𝚑𝚛𝚎𝚊𝚝𝚜. 𝚆𝚒𝚝𝚑 𝚛𝚎𝚊𝚕-𝚝𝚒𝚖𝚎
+𝚙𝚛𝚘𝚝𝚎𝚌𝚝𝚒𝚘𝚗 𝚊𝚗𝚍 𝚜𝚖𝚊𝚛𝚝 𝚝𝚑𝚛𝚎𝚊𝚝 𝚍𝚎𝚝𝚎𝚌𝚝𝚒𝚘𝚗, 𝚠𝚎 𝚔𝚎𝚎𝚙 𝚢𝚘𝚞𝚛 𝚍𝚊𝚝𝚊 𝚜𝚊𝚏𝚎 𝚠𝚒𝚝𝚑𝚘𝚞𝚝 𝚜𝚕𝚘𝚠𝚒𝚗𝚐 𝚢𝚘𝚞 𝚍𝚘𝚠𝚗. 𝙵𝚊𝚜𝚝, 𝚜𝚎𝚌𝚞𝚛𝚎,
+𝚊𝚗𝚍 𝚎𝚊𝚜𝚢 𝚝𝚘 𝚞𝚜𝚎 — 𝙺𝚢𝚕𝚘𝚗𝚎 𝚒𝚜 𝚢𝚘𝚞𝚛 𝚍𝚒𝚐𝚒𝚝𝚊𝚕 𝚜𝚑𝚒𝚎𝚕𝚍.</p>
+  </div>
+  <div style="flex: 0 0 40%; text-align: center;">
+    <img src="about1.jpg" alt="Kylone Antivirus" style="max-width: 100%; height: auto; border-radius: 8px;">
+  </div>
+</div>
+<hr>
+ <div style="max-width: 1000px; margin: 40px auto; padding: 0 20px; display: flex; align-items: center; gap: 40px;">
+  <div style="flex: 0 0 60%;">
+<style> body {
+  font-family: "Times New Roman", Times, serif;
+}
+</style>    
+    <h1 style="color:rgba(255, 145, 0, 0.993);">Service:</h1>
+    <p style="font-size: 24px; line-height: 1.5;">
+     𝙺𝚢𝚕𝚘𝚗𝚎 𝙰𝚗𝚝𝚒𝚟𝚒𝚛𝚞𝚜 𝚘𝚏𝚏𝚎𝚛𝚜 𝚛𝚎𝚊𝚕-𝚝𝚒𝚖𝚎 𝚟𝚒𝚛𝚞𝚜 𝚙𝚛𝚘𝚝𝚎𝚌𝚝𝚒𝚘𝚗 𝚝𝚑𝚊𝚝 𝚌𝚘𝚗𝚝𝚒𝚗𝚞𝚘𝚞𝚜𝚕𝚢 𝚖𝚘𝚗𝚒𝚝𝚘𝚛𝚜 𝚊𝚗𝚍 𝚋𝚕𝚘𝚌𝚔𝚜 𝚟𝚒𝚛𝚞𝚜𝚎𝚜 𝚊𝚗𝚍 𝚖𝚊𝚕𝚠𝚊𝚛𝚎 𝚝𝚘 𝚔𝚎𝚎𝚙 𝚢𝚘𝚞𝚛 𝚍𝚎𝚟𝚒𝚌𝚎 𝚜𝚊𝚏𝚎. 
+     𝙸𝚝 𝚏𝚎𝚊𝚝𝚞𝚛𝚎𝚜 𝚜𝚖𝚊𝚛𝚝 𝚝𝚑𝚛𝚎𝚊𝚝 𝚍𝚎𝚝𝚎𝚌𝚝𝚒𝚘𝚗, 𝚊𝚕𝚕𝚘𝚠𝚒𝚗𝚐 𝚒𝚝 𝚝𝚘 𝚚𝚞𝚒𝚌𝚔𝚕𝚢 𝚒𝚍𝚎𝚗𝚝𝚒𝚏𝚢 𝚊𝚗𝚍 𝚗𝚎𝚞𝚝𝚛𝚊𝚕𝚒𝚣𝚎 𝚎𝚖𝚎𝚛𝚐𝚒𝚗𝚐 𝚘𝚗𝚕𝚒𝚗𝚎 𝚝𝚑𝚛𝚎𝚊𝚝𝚜. 𝙳𝚎𝚜𝚒𝚐𝚗𝚎𝚍 𝚝𝚘 𝚋𝚎 𝚕𝚒𝚐𝚑𝚝𝚠𝚎𝚒𝚐𝚑𝚝 
+     𝚊𝚗𝚍 𝚏𝚊𝚜𝚝, 𝙺𝚢𝚕𝚘𝚗𝚎 𝚙𝚛𝚘𝚝𝚎𝚌𝚝𝚜 𝚢𝚘𝚞𝚛 𝚍𝚎𝚟𝚒𝚌𝚎 𝚠𝚒𝚝𝚑𝚘𝚞𝚝 𝚊𝚏𝚏𝚎𝚌𝚝𝚒𝚗𝚐 𝚒𝚝𝚜 𝚙𝚎𝚛𝚏𝚘𝚛𝚖𝚊𝚗𝚌𝚎. 𝚃𝚑𝚎 𝚊𝚗𝚝𝚒𝚟𝚒𝚛𝚞𝚜 𝚑𝚊𝚜 𝚊 𝚞𝚜𝚎𝚛-𝚏𝚛𝚒𝚎𝚗𝚍𝚕𝚢 𝚒𝚗𝚝𝚎𝚛𝚏𝚊𝚌𝚎, 𝚖𝚊𝚔𝚒𝚗𝚐 𝚒𝚝 𝚎𝚊𝚜𝚢 𝚏𝚘𝚛
+      𝚊𝚗𝚢𝚘𝚗𝚎 𝚝𝚘 𝚒𝚗𝚜𝚝𝚊𝚕𝚕 𝚊𝚗𝚍 𝚞𝚜𝚎. 𝙰𝚍𝚍𝚒𝚝𝚒𝚘𝚗𝚊𝚕𝚕𝚢, 𝚒𝚝 𝚙𝚛𝚘𝚟𝚒𝚍𝚎𝚜 𝚛𝚎𝚐𝚞𝚕𝚊𝚛 𝚞𝚙𝚍𝚊𝚝𝚎𝚜 𝚝𝚘 𝚎𝚗𝚜𝚞𝚛𝚎 𝚙𝚛𝚘𝚝𝚎𝚌𝚝𝚒𝚘𝚗 𝚊𝚐𝚊𝚒𝚗𝚜𝚝 𝚝𝚑𝚎 𝚕𝚊𝚝𝚎𝚜𝚝 𝚜𝚎𝚌𝚞𝚛𝚒𝚝𝚢 𝚝𝚑𝚛𝚎𝚊𝚝𝚜.</p>
+  </div>
+  <div style="flex: 0 0 40%; text-align: center;">
+    <img src="service1.jpg" alt="Kylone Antivirus" style="max-width: 100%; height: auto; border-radius: 8px;">
+  </div>
+</div>
+<hr>
+<div style="max-width: 1000px; margin: 40px auto; padding: 0 20px; display: flex; align-items: center; gap: 40px;">
+  <div style="flex: 0 0 60%;">
+<style> body {
+  font-family: "Times New Roman", Times, serif;
+}
+</style>    
+    <h1 style="color:rgb(255, 145, 0, 0.993);">Contact:</h1>
+    <p style="font-size: 24px; line-height: 1.5;">
+   𝚈𝚘𝚞 𝚌𝚊𝚗 𝚛𝚎𝚊𝚌𝚑 𝚘𝚞𝚝 𝚝𝚘 𝚞𝚜 𝚊𝚗𝚢𝚝𝚒𝚖𝚎 𝚏𝚘𝚛 𝚜𝚞𝚙𝚙𝚘𝚛𝚝 𝚘𝚛 𝚒𝚗𝚚𝚞𝚒𝚛𝚒𝚎𝚜. 𝙴𝚖𝚊𝚒𝚕 𝚞𝚜 𝚊𝚝 𝚜𝚞𝚙𝚙𝚘𝚛𝚝@𝚔𝚢𝚕𝚘𝚗𝚎𝚊𝚗𝚝𝚒𝚟𝚒𝚛𝚞𝚜.𝚌𝚘𝚖 𝚘𝚛 𝚌𝚊𝚕𝚕 𝚞𝚜 𝚊𝚝 +𝟷-𝟾𝟶𝟶-𝟷𝟸𝟹-𝟺𝟻𝟼𝟽. 
+   𝙵𝚘𝚕𝚕𝚘𝚠 𝚞𝚜 𝚘𝚗 𝚜𝚘𝚌𝚒𝚊𝚕 𝚖𝚎𝚍𝚒𝚊 𝚏𝚘𝚛 𝚞𝚙𝚍𝚊𝚝𝚎𝚜 𝚊𝚗𝚍 𝚝𝚒𝚙𝚜 𝚘𝚗 𝚜𝚝𝚊𝚢𝚒𝚗𝚐 𝚜𝚎𝚌𝚞𝚛𝚎 𝚘𝚗𝚕𝚒𝚗𝚎. 𝚆𝚎'𝚛𝚎 𝚑𝚎𝚛𝚎 𝚝𝚘 𝚑𝚎𝚕𝚙 𝚢𝚘𝚞 𝟸𝟺/𝟽.</p>
+  </div>
+  <div style="flex: 0 0 40%; text-align: center;">
+    <img src="contact.jpg" alt="Kylone Antivirus" style="max-width: 100%; height: auto; border-radius: 8px;">
+  </div>
+</div>
+</section>
+<hr>
+<center><h1 style="color:rgb(255, 145, 0, 0.993);">Solutions that we provide:</h1></center>
+<marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
+  <div style="display:inline-block; text-align:center; margin-right:20px;">
+    <a href="https://en.wikipedia.org/wiki/Malware"target="_blank"><img src="malware2.png" width="200"><br><span style="color:white;">𝚆𝚎 𝚙𝚛𝚘𝚟𝚒𝚍𝚎 𝚙𝚘𝚠𝚎𝚛𝚏𝚞𝚕 𝚖𝚊𝚕𝚠𝚊𝚛𝚎 <br>𝚙𝚛𝚘𝚝𝚎𝚌𝚝𝚒𝚘𝚗 𝚝𝚘 𝚔𝚎𝚎𝚙 𝚢𝚘𝚞𝚛 <br>𝚍𝚎𝚟𝚒𝚌𝚎 𝚜𝚊𝚏𝚎 𝚏𝚛𝚘𝚖 𝚑𝚊𝚛𝚖𝚏𝚞𝚕 <br>𝚜𝚘𝚏𝚝𝚠𝚊𝚛𝚎, 𝚎𝚗𝚜𝚞𝚛𝚒𝚗𝚐 𝚝𝚘𝚙-𝚕𝚎𝚟𝚎𝚕 <br>𝚜𝚎𝚌𝚞𝚛𝚒𝚝𝚢 𝚊𝚝 𝚊𝚕𝚕 𝚝𝚒𝚖𝚎𝚜.</span>
+  </div>
+  <div style="display:inline-block; text-align:center; margin-right:20px;">
+    <a href="https://www.sciencedirect.com/topics/computer-science/real-time-protection"target="_blank"><img src="real.png" width="200"><br><span style="color:white;">𝚆𝚎 𝚘𝚏𝚏𝚎𝚛 𝚊𝚍𝚟𝚊𝚗𝚌𝚎𝚍 𝚛𝚎𝚊𝚕-𝚝𝚒𝚖𝚎 <br>𝚟𝚒𝚛𝚞𝚜 𝚍𝚎𝚝𝚎𝚌𝚝𝚒𝚘𝚗 𝚝𝚘 𝚒𝚗𝚜𝚝𝚊𝚗𝚝𝚕𝚢 <br>𝚋𝚕𝚘𝚌𝚔 𝚝𝚑𝚛𝚎𝚊𝚝𝚜 𝚊𝚗𝚍 𝚔𝚎𝚎𝚙 𝚢𝚘𝚞𝚛 <br>𝚍𝚎𝚟𝚒𝚌𝚎 𝚏𝚞𝚕𝚕𝚢 𝚙𝚛𝚘𝚝𝚎𝚌𝚝𝚎𝚍 <br>𝚊𝚝 𝚊𝚕𝚕 𝚝𝚒𝚖𝚎𝚜.</span>
+  </div>
+  <div style="display:inline-block; text-align:center; margin-right:20px;">
+    <a href="https://www.cisco.com/site/us/en/learn/topics/security/what-is-ransomware.html"target="_blank"><img src="rans.png" width="200"><br><span style="color:white;">𝚁𝚊𝚗𝚜𝚘𝚖𝚠𝚊𝚛𝚎 𝚍𝚎𝚏𝚎𝚗𝚜𝚎 𝚐𝚒𝚟𝚎𝚜 <br>𝚝𝚑𝚎 𝚋𝚎𝚜𝚝 𝚙𝚛𝚘𝚝𝚎𝚌𝚝𝚒𝚘𝚗 𝚋𝚢 <br>𝚍𝚎𝚝𝚎𝚌𝚝𝚒𝚗𝚐, 𝚋𝚕𝚘𝚌𝚔𝚒𝚗𝚐, 𝚊𝚗𝚍 <br>𝚛𝚎𝚖𝚘𝚟𝚒𝚗𝚐 𝚝𝚑𝚛𝚎𝚊𝚝𝚜 <br>𝚋𝚎𝚏𝚘𝚛𝚎 𝚝𝚑𝚎𝚢 𝚕𝚘𝚌𝚔 𝚢𝚘𝚞𝚛 𝚏𝚒𝚕𝚎.</span>
+  </div>
+  <div style="display:inline-block; text-align:center; margin-right:20px;">
+    <a href="https://en.wikipedia.org/wiki/Anti-phishing_software"target="_blank"><img src="anti.png" width="200"><br><span style="color:white;">𝙰𝚗𝚝𝚒-𝚙𝚑𝚒𝚜𝚑𝚒𝚗𝚐 𝚏𝚒𝚕𝚝𝚎𝚛𝚜 𝚙𝚛𝚘𝚝𝚎𝚌𝚝<br>𝚢𝚘𝚞 𝚋𝚢 𝚋𝚕𝚘𝚌𝚔𝚒𝚗𝚐 𝚏𝚊𝚔𝚎 𝚠𝚎𝚋𝚜𝚒𝚝𝚎𝚜 <br>𝚊𝚗𝚍 𝚎𝚖𝚊𝚒𝚕𝚜 𝚝𝚑𝚊𝚝 𝚝𝚛𝚢 𝚝𝚘 𝚜𝚝𝚎𝚊𝚕 <br>𝚢𝚘𝚞𝚛 𝚒𝚗𝚏𝚘, 𝚔𝚎𝚎𝚙𝚒𝚗𝚐 𝚢𝚘𝚞𝚛 <br>𝚍𝚊𝚝𝚊 𝚜𝚊𝚏𝚎.</span>
+  </div>
+  <div style="display:inline-block; text-align:center; margin-right:20px;">
+    <a href="https://en.wikipedia.org/wiki/Firewall_(computing)"target="_blank"><img src="fire.png" width="200"><br><span style="color:white;">𝙵𝚒𝚛𝚎𝚠𝚊𝚕𝚕 𝚜𝚎𝚌𝚞𝚛𝚒𝚝𝚢 𝚐𝚒𝚟𝚎𝚜 𝚝𝚑𝚎 <br>𝚋𝚎𝚜𝚝 𝚙𝚛𝚘𝚝𝚎𝚌𝚝𝚒𝚘𝚗 𝚋𝚢 𝚖𝚘𝚗𝚒𝚝𝚘𝚛𝚒𝚗𝚐 <br>𝚊𝚗𝚍 𝚋𝚕𝚘𝚌𝚔𝚒𝚗𝚐 𝚞𝚗𝚊𝚞𝚝𝚑𝚘𝚛𝚒𝚣𝚎𝚍 𝚊𝚌𝚌𝚎𝚜𝚜, <br>𝚔𝚎𝚎𝚙𝚒𝚗𝚐 𝚢𝚘𝚞𝚛 𝚗𝚎𝚝𝚠𝚘𝚛𝚔 𝚜𝚊𝚏𝚎 <br>𝚏𝚛𝚘𝚖 𝚑𝚊𝚌𝚔𝚎𝚛𝚜 𝚊𝚗𝚍 𝚝𝚑𝚛𝚎𝚊𝚝𝚜.</span>
+  </div>
+  <div style="display:inline-block; text-align:center; margin-right:20px;">
+    <a href="https://www.geeksforgeeks.org/web-security-considerations/"target="_blank"><img src="web.png" width="200"><br><span style="color:white;">𝚆𝚎 𝚙𝚛𝚘𝚟𝚒𝚍𝚎 𝚝𝚘𝚙-𝚕𝚎𝚟𝚎𝚕 𝚠𝚎𝚋 <br>𝚜𝚊𝚏𝚎𝚝𝚢 𝚝𝚘 𝚋𝚕𝚘𝚌𝚔 𝚑𝚊𝚛𝚖𝚏𝚞𝚕 <br>𝚜𝚒𝚝𝚎𝚜 𝚊𝚗𝚍 𝚔𝚎𝚎𝚙 𝚢𝚘𝚞𝚛 <br>𝚘𝚗𝚕𝚒𝚗𝚎 𝚎𝚡𝚙𝚎𝚛𝚒𝚎𝚗𝚌𝚎 <br>𝚜𝚎𝚌𝚞𝚛𝚎 𝚊𝚗𝚍 𝚠𝚘𝚛𝚛𝚢-𝚏𝚛𝚎𝚎.</span>
+  </div>
+</marquee>
+<hr>
+<div style="padding: 20px; background-color: #111; color: white; font-family: Arial, sans-serif;">
+  <h2 style="text-align: center; color: #00ffd5;">Kylone Antivirus Plans Comparison</h2>
+  <table style="width: 100%; border-collapse: collapse; margin-top: 20px; background-color: #222;">
+    <thead>
+      <tr style="background-color: #00ffd5; color: #000;">
+        <th style="padding: 12px; border: 1px solid #444;">Feature</th>
+        <th style="padding: 12px; border: 1px solid #444;">Free Plan</th>
+        <th style="padding: 12px; border: 1px solid #444;">Pro Plan</th>
+        <th style="padding: 12px; border: 1px solid #444;">Enterprise Plan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color: #333;">
+        <td style="padding: 10px; border: 1px solid #444;">Virus Scan</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr style="background-color: #333;">
+        <td style="padding: 10px; border: 1px solid #444;">Automatic Updates</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #444;">Real-Time Protection</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #444;">Malware Protection</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #444;">Firewall Integration</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr style="background-color: #333;">
+        <td style="padding: 10px; border: 1px solid #444;">Cloud-Based Scanning</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr style="background-color: #333;">
+        <td style="padding: 10px; border: 1px solid #444;">Web Protection</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #444;">Support</td>
+        <td style="text-align: center;">Email Only</td>
+        <td style="text-align: center;">24/7 Chat</td>
+        <td style="text-align: center;">Dedicated Manager</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr>
+<footer class="text-white py-3" style="background-color: black; display: flex; justify-content: space-between; align-items: center; padding: 20px; color: white; flex-wrap: wrap;">
+  <div style="flex: 1; text-align: left; min-width: 250px;">
+    <img src="web logo.png" alt="Kylone Antivirus" style="max-width: 100px; height: auto 90px;; border-radius: 8%;">
+    <h1 style="margin: 10px 0 0 0;">KYLONE</h1>
+  </div>
+  <div style="flex: 1; text-align: right; min-width: 250px;">
+  <p style="margin-bottom: 10px;">
+    📧 Email: <a href="mailto:support@kyloneantivirus.com" style="color: white;">support@kyloneantivirus.com</a>
+  </p>
+  <p style="margin-bottom: 10px;">
+    📞 Phone: <a href="tel:+917388156231" style="color: white;">+91 73881 56231</a>
+  </p>
+  <p>
+    🌐 Follow us:
+    <a href="https://facebook.com" target="_blank" style="color: white; margin: 0 5px;">Facebook</a> |
+    <a href="https://twitter.com" target="_blank" style="color: white; margin: 0 5px;">Twitter</a> |
+    <a href="https://instagram.com" target="_blank" style="color: white; margin: 0 5px;">Instagram</a>
+  </p>
+</div>
+</footer>
+  <div style="background-color: black; color: white; text-align: center; padding: 10px;">
+  &copy; 2025 Kylone. All rights reserved.
+</div>
+</style>
+</body>
+</html>
