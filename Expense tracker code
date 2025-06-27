@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker PRO++</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #0f172a; color: #fff; display: flex; }
+
+    .sidebar {
+      width: 240px; background: #1e293b; height: 100vh; padding: 30px 10px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      position: fixed; left: 0; top: 0;
+    }
+    .sidebar .logo { text-align: center; margin-bottom: 50px; font-weight: bold; font-size: 24px; color: #3b82f6; }
+    .menu a {
+      display: flex; align-items: center; padding: 20px 30px; color: #fff; text-decoration: none;
+      border-radius: 15px; margin-bottom: 20px; transition: 0.3s; font-size: 18px;
+      cursor: pointer;
+    }
+    .menu a i { margin-right: 20px; font-size: 20px; }
+    .menu a:hover, .active { background: #334155; }
+    .main {
+      margin-left: 260px; padding: 40px 50px; flex: 1; overflow-y: auto;
+    }
+    .hidden { display: none; }
+
+    .top-summary { display: flex; justify-content: space-between; gap: 30px; margin-bottom: 50px; }
+    .card {
+      background: #1e293b; padding: 40px; border-radius: 20px; box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      flex: 1;
+    }
+    .card h3 { font-size: 20px; margin-bottom: 20px; }
+    .card h2 { font-size: 28px; }
+
+    .dashboard { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+
+    .add-expense-form input, .add-expense-form select, .add-expense-form button {
+      width: 100%; padding: 15px 20px; margin-bottom: 20px; border-radius: 10px; border: none; font-size: 16px;
+    }
+    .add-expense-form button { background: #3b82f6; color: #fff; cursor: pointer; }
+    .add-expense-form button:hover { background: #2563eb; }
+
+    .category-icons {
+      display: flex; justify-content: space-between; margin-top: 30px; flex-wrap: wrap;
+    }
+    .category-icons div {
+      background: #334155; padding: 15px; border-radius: 15px; text-align: center; width: 90px; margin-bottom: 10px;
+      cursor: pointer; transition: 0.3s;
+    }
+    .category-icons div:hover { background: #475569; }
+    .category-icons div i { font-size: 24px; margin-bottom: 5px; }
+
+    .recent-expense-item {
+      padding: 12px 0; border-bottom: 1px solid #334155; font-size: 15px;
+    }
+
+    .chart-container {
+      margin-top: 40px;
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .vertical-space { margin-bottom: 40px; }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo"><i class="fas fa-wallet"></i> ExpensePro++</div>
+  <div class="menu">
+    <a onclick="showPage('dashboardPage')" id="dashboardLink" class="active"><i class="fas fa-home"></i> Dashboard</a>
+    <a onclick="showPage('reportsPage')" id="reportsLink"><i class="fas fa-chart-pie"></i> Reports</a>
+    <a onclick="showPage('goalsPage')" id="goalsLink"><i class="fas fa-bullseye"></i> Goals</a>
+    <a onclick="showPage('settingsPage')" id="settingsLink"><i class="fas fa-cog"></i> Settings</a>
+  </div>
+</div>
+
+<div class="main">
+
+  <div id="dashboardPage">
+    <div class="top-summary">
+      <div class="card"><h3>Total Balance</h3><h2 id="totalBalance">₹ 35000</h2></div>
+      <div class="card"><h3>This Month Spend</h3><h2 id="monthlySpend">₹ 0</h2></div>
+      <div class="card"><h3>Saving Goals</h3><h2>₹ 5000</h2></div>
+    </div>
+
+    <div class="dashboard">
+      <div class="card">
+        <h3>Add New Expense</h3>
+        <div class="add-expense-form">
+          <select id="expenseCategory">
+            <option value="Food">🍔 Food</option>
+            <option value="Transport">🚗 Transport</option>
+            <option value="Shopping">🛍️ Shopping</option>
+            <option value="Health">💊 Health</option>
+            <option value="EMI">🏦 EMI</option>
+            <option value="Entertainment">🎮 Entertainment</option>
+            <option value="Home">🏠 Home</option>
+          </select>
+          <input type="text" id="description" placeholder="Description">
+          <input type="number" id="amount" placeholder="Amount ₹">
+          <input type="date" id="date">
+          <button onclick="addExpense()">Add Expense</button>
+        </div>
+
+        <div class="category-icons">
+          <div onclick="quickSelect('Food')"><i class="fas fa-burger"></i><br>Food</div>
+          <div onclick="quickSelect('Transport')"><i class="fas fa-car"></i><br>Transport</div>
+          <div onclick="quickSelect('Shopping')"><i class="fas fa-shopping-bag"></i><br>Shopping</div>
+          <div onclick="quickSelect('Health')"><i class="fas fa-pills"></i><br>Health</div>
+          <div onclick="quickSelect('EMI')"><i class="fas fa-landmark"></i><br>EMI</div>
+          <div onclick="quickSelect('Entertainment')"><i class="fas fa-gamepad"></i><br>Fun</div>
+          <div onclick="quickSelect('Home')"><i class="fas fa-home"></i><br>Home</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card vertical-space">
+          <h3>Recent Expenses</h3>
+          <div id="recentExpenses"></div>
+        </div>
+        <div class="card">
+          <h3>Budget Overview</h3>
+          <p>Budget: ₹ 15000</p>
+          <p>Remaining: ₹ <span id="remainingBudget">15000</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="pieChart" height="300"></canvas>
+    </div>
+  </div>
+
+  <div id="reportsPage" class="hidden">
+    <div class="card">
+      <h2>Expense Reports Summary</h2>
+      <p>Total Spent This Month: <strong>₹ <span id="reportSpend">0</span></strong></p>
+      <p>Top Spending Category: <strong><span id="topCategory">N/A</span></strong></p>
+      <p>Average Daily Spend: <strong>₹ <span id="averageSpend">0</span></strong></p>
+    </div>
+  </div>
+
+  <div id="goalsPage" class="hidden">
+    <div class="card">
+      <h2>Financial Goals</h2>
+      <p>🏖 Vacation Goal: ₹ 50,000 - Target Date: Dec 2025</p>
+      <p>🚗 New Car EMI Clearance: ₹ 3,00,000 - Target Date: Dec 2026</p>
+      <p>💼 Business Investment Fund: ₹ 5,00,000 - Target Date: Mar 2027</p>
+    </div>
+  </div>
+
+  <div id="settingsPage" class="hidden">
+    <div class="card">
+      <h2>Settings</h2>
+      <p>Theme: <strong>Dark Mode</strong></p>
+      <p>Currency: <strong>INR ₹</strong></p>
+      <p>Backup: <button style="padding:10px; margin-top:10px;">Export Data</button></p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  let balance = 35000;
+  let monthSpend = 0;
+  let budget = 15000;
+  let expenses = [];
+  let categoryData = { Food: 0, Transport: 0, Shopping: 0, Health: 0, EMI: 0, Entertainment: 0, Home: 0 };
+
+  const pieCtx = document.getElementById('pieChart').getContext('2d');
+  const pieChart = new Chart(pieCtx, {
+    type: 'pie',
+    data: {
+      labels: Object.keys(categoryData),
+      datasets: [{
+        data: Object.values(categoryData),
+        backgroundColor: ['#ef4444','#f97316','#eab308','#22c55e','#3b82f6','#a855f7','#14b8a6']
+      }]
+    },
+    options: { plugins: { legend: { labels: { color: '#fff' } } } }
+  });
+
+  function addExpense() {
+    const category = document.getElementById("expenseCategory").value;
+    const desc = document.getElementById("description").value;
+    const amount = parseFloat(document.getElementById("amount").value);
+    const date = document.getElementById("date").value;
+    if (!amount || amount <= 0 || desc === "" || date === "") { alert("Please fill all fields."); return; }
+    balance -= amount; monthSpend += amount; categoryData[category] += amount;
+    expenses.push({ category, desc, amount, date });
+    document.getElementById("totalBalance").innerText = `₹ ${balance.toFixed(2)}`;
+    document.getElementById("monthlySpend").innerText = `₹ ${monthSpend.toFixed(2)}`;
+    document.getElementById("remainingBudget").innerText = (budget - monthSpend).toFixed(2);
+    renderExpenses(); updatePieChart(); updateReports();
+    document.getElementById("description").value = ""; document.getElementById("amount").value = "";
+  }
+
+  function renderExpenses() {
+    const container = document.getElementById("recentExpenses");
+    container.innerHTML = "";
+    expenses.slice().reverse().forEach(e => {
+      const div = document.createElement("div");
+      div.className = "recent-expense-item";
+      div.innerText = `${e.date} | ₹${e.amount} | ${e.category} (${e.desc})`;
+      container.appendChild(div);
+    });
+  }
+
+  function updatePieChart() {
+    pieChart.data.datasets[0].data = Object.values(categoryData);
+    pieChart.update();
+  }
+
+  function updateReports() {
+    document.getElementById("reportSpend").innerText = monthSpend.toFixed(2);
+    let topCat = Object.entries(categoryData).sort((a,b) => b[1]-a[1])[0][0];
+    document.getElementById("topCategory").innerText = topCat;
+    let avg = expenses.length ? (monthSpend/expenses.length).toFixed(2) : 0;
+    document.getElementById("averageSpend").innerText = avg;
+  }
+
+  function quickSelect(category) {
+    document.getElementById("expenseCategory").value = category;
+  }
+
+  document.getElementById("date").valueAsDate = new Date();
+
+  function showPage(pageId) {
+    ["dashboardPage", "reportsPage", "goalsPage", "settingsPage"].forEach(p => {
+      document.getElementById(p).classList.add("hidden");
+    });
+    document.getElementById(pageId).classList.remove("hidden");
+    document.querySelectorAll(".menu a").forEach(link => link.classList.remove("active"));
+    document.getElementById(pageId.replace("Page","Link")).classList.add("active");
+  }
+
+  // Keyboard gesture: Enter key moves to next field
+  document.getElementById("description").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      document.getElementById("amount").focus();
+    }
+  });
+
+</script>
+
+</body>
+</html>
